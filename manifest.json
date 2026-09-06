@@ -1,0 +1,34 @@
+{
+  "name": "landlord-complaint-escalator",
+  "description": "Zero-API, local-first maintenance complaint tracker that monitors unresolved landlord issues against deadlines and auto-drafts escalating messages (polite -> firm -> formal notice) sent directly to your Telegram for one-tap copy-pasting.",
+  "metadata": {
+    "version": "0.1.0",
+    "status": "released",
+    "kind": "atomic",
+    "flow_type": "sequential",
+    "execution_model": "script",
+    "requires_sessions": false,
+    "discoverability": {
+      "tags": [
+        "domain-housing",
+        "maintenance-escalator",
+        "audience-tenants",
+        "effect-write-local",
+        "notification-telegram"
+      ]
+    },
+    "runtime_dependencies": {
+      "host_tools": [
+        {
+          "id": "python3",
+          "command": "python3",
+          "required": true,
+          "install_hints": [
+            "apt install python3"
+          ]
+        }
+      ]
+    }
+  },
+  "entrypoint": "main.py"
+}
